@@ -169,7 +169,7 @@
     padding-bottom: 5px;
   }
   .flickity-page-dots {
-    bottom: 0;
+    bottom: 7vh;
   }
   .flickity-page-dots .dot {
      display: inline-block;
@@ -203,7 +203,6 @@
     padding: 10px;
   }
   .grid-container > div {
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj3L0HU9hftDfSuelj7p2_uobRgIK_-pvwXQ:https://resources.workable.com/wp-content/uploads/2013/09/journalist-640x230.jpg&usqp=CAU");
     padding: 60px 0;
     display: flex;
     justify-content: center;
@@ -214,6 +213,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     filter: grayscale(100);
+    background-position: center;
   }
   .grid-container div span{
     background-color: rgba(245,245,245,0.7);
@@ -221,20 +221,36 @@
     border-radius: var(--radius-round);
   }
   .grid-container > div:hover {
-    background-color: red;
     color:#FF6961;
     transition: 0.2s;
     filter: grayscale(0);
   }
+  .item1{
+    background: url("https://www.cornellsci.com/images/about-001.jpeg");
+  }
   .item2 {
+    background: url("https://www.simplilearn.com/ice9/free_resources_article_thumb/Proven_Time_Management_Tips_and_Strategies_for_students.jpg");
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
   }
   .item3{
+    background: url("https://www.brightoncollege.com/wp-content/uploads/2012/03/are-you-studying-properly.jpg");
     grid-row-start: 1;
     grid-row-end: 3;
+  }
+  .item4{
+    background: url("#");
+  }
+  .item4:hover{
+    background-color: #24272e;
+    color:#FF6961;
+    transition: 0.2s;
+    filter: grayscale(0);
+  }
+  .item4 span{
+    transform: scale(1.5);
   }
   @media screen and (max-width: 800px){
     .grid-container > div {
