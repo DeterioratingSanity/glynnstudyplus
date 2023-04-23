@@ -65,12 +65,13 @@
   .oneWrapper{
     background-color: #24272e;
     padding-top: 5px;
+    padding-bottom: 5px;
     height: auto;
   }
   .oneWrapper2{
     background-color: #f5f5f5;
     padding-top: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     height: auto;
   }
   .oneWrapper3{
@@ -120,6 +121,7 @@
     min-height:78vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     background: linear-gradient(8.75turn, #FF6961, #FF3D33);
     -webkit-mask: var(--mask-edge-zig-zag-vertical);
     padding-top: 50px;
@@ -151,9 +153,88 @@
     color: #24272e;
     background-color: #f5f5f5;
   }
-</style>
 
+  .carousel-cell{
+    display: flex;
+    align-items: center;
+    min-height: 40vh;
+  }
+  .cell-wrapper{
+    background-color: black;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .flickity-page-dots {
+    bottom: 0px;
+  }
+  .flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+    transition: 0.5s;
+  }
+  .flickity-page-dots .dot.is-selected {
+    background: #FF6961;
+    transition: 0.5s;
+  }
+  .textbox{
+    font-size: 1.2em;
+    width: 60vw;
+    margin: 0 10vw 0 10vw;
+    text-align: center;
+  }
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background-color: #24272e;
+    padding: 10px;
+  }
+  .grid-container > div {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj3L0HU9hftDfSuelj7p2_uobRgIK_-pvwXQ:https://resources.workable.com/wp-content/uploads/2013/09/journalist-640x230.jpg&usqp=CAU");
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #24272e;
+    transition: 0.2s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100);
+  }
+  .grid-container div span{
+    background-color: rgba(245,245,245,0.7);
+    padding: 5px;
+    border-radius: var(--radius-round);
+  }
+  .grid-container > div:hover {
+    background-color: red;
+    color:#FF6961;
+    transition: 0.2s;
+    filter: grayscale(0);
+  }
+  .item2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .item3{
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+</style>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+<script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 <link href="https://fonts.cdnfonts.com/css/jua" rel="stylesheet">
 
@@ -161,53 +242,29 @@
   <div class="oneWrapper2">
     <div class="oneWrapper3">
       <div class="sect" id="sectionOne" >
+            <div class="main-carousel" data-flickity='{ "cellAlign": "center"}' style="width:100vw;">
+              <div class="carousel-cell">
+                <div class="textbox">
+                  <div class="header">
+                    Glynn Study <img src="plus.png">
+                  </div>
+                </div>
+              </div>
 
-        <div class="header">
-          Glynn Study <img src="plus.png">
-        </div>
+              <div class="carousel-cell">
+                <div class="textbox">
+                  <div class="header">
+                    <div class="grid-container">
+                      <div class="item1"><span>About</span></div>
+                      <div class="item2"><span>Time Management</span></div>
+                      <div class="item3"><span>Study Skills</span></div>
+                      <div class="item4"><span>Developer</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="twoWrapper">
-  <div class="twoWrapper2">
-    <div class="twoWrapper3">
-      <div class="sect bodySect">
-        <div class="bodySect-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed. Ipsum a arcu cursus vitae congue. Tristique senectus et netus et malesuada fames ac turpis. Suscipit tellus mauris a diam maecenas sed enim ut sem. Nibh mauris cursus mattis molestie a. Morbi tristique senectus et netus. Turpis egestas integer eget aliquet nibh praesent tristique. Amet nulla facilisi morbi tempus iaculis urna id volutpat. Facilisi nullam vehicula ipsum a arcu. Sed elementum tempus egestas sed sed risus. Arcu dui vivamus arcu felis bibendum. Nunc mattis enim ut tellus elementum sagittis vitae. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Aliquam purus sit amet luctus venenatis lectus. Mollis nunc sed id semper. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Convallis convallis tellus id interdum velit. Vulputate ut pharetra sit amet aliquam id diam maecenas.
-
-          Nibh cras pulvinar mattis nunc sed blandit libero. Posuere lorem ipsum dolor sit. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. At lectus urna duis convallis convallis tellus id. Phasellus egestas tellus rutrum tellus pellentesque eu. Et egestas quis ipsum suspendisse. Arcu cursus vitae congue mauris rhoncus aenean vel. Placerat orci nulla pellentesque dignissim enim sit amet. Euismod elementum nisi quis eleifend quam adipiscing vitae. Semper risus in hendrerit gravida rutrum quisque non tellus. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius.
-
-          Ultrices tincidunt arcu non sodales neque sodales. Ut venenatis tellus in metus vulputate eu. Aliquam malesuada bibendum arcu vitae. Non arcu risus quis varius quam quisque id diam. Et pharetra pharetra massa massa ultricies mi quis hendrerit dolor. Facilisis volutpat est velit egestas. Integer eget aliquet nibh praesent tristique magna sit amet. Morbi non arcu risus quis varius. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Egestas erat imperdiet sed euismod nisi porta. Eu feugiat pretium nibh ipsum consequat nisl vel. Sed libero enim sed faucibus turpis in eu. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Ac ut consequat semper viverra nam libero. At quis risus sed vulputate odio ut enim blandit volutpat. Odio morbi quis commodo odio aenean sed adipiscing diam donec. Sem et tortor consequat id.
-
-          Erat velit scelerisque in dictum non consectetur a erat nam. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Vitae semper quis lectus nulla at volutpat diam. Nam at lectus urna duis convallis convallis tellus id interdum. Vitae tortor condimentum lacinia quis vel eros donec ac. Fusce ut placerat orci nulla pellentesque dignissim enim sit. In iaculis nunc sed augue lacus viverra. Sodales ut eu sem integer vitae justo eget. Lorem ipsum dolor sit amet consectetur adipiscing elit. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing.
-
-          Eget nunc scelerisque viverra mauris in aliquam sem fringilla. Sed sed risus pretium quam. Quam lacus suspendisse faucibus interdum posuere. Tortor condimentum lacinia quis vel. At augue eget arcu dictum varius duis at consectetur. Pellentesque pulvinar pellentesque habitant morbi tristique. Amet justo donec enim diam. Dui accumsan sit amet nulla facilisi morbi tempus iaculis urna. Adipiscing commodo elit at imperdiet dui accumsan. Lorem ipsum dolor sit amet consectetur adipiscing.
-          Tortor consequat id porta nibh venenatis cras sed. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Sem viverra aliquet eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat id porta. Velit sed ullamcorper morbi tincidunt ornare. Cursus vitae congue mauris rhoncus aenean vel elit. Consequat semper viverra nam libero justo laoreet sit amet. Sodales ut eu sem integer vitae.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="threeWrapper">
-  <div class="threeWrapper2">
-    <div class="threeWrapper3">
-      <div class="sect bodySect">
-        <div class="bodySect-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed. Ipsum a arcu cursus vitae congue. Tristique senectus et netus et malesuada fames ac turpis. Suscipit tellus mauris a diam maecenas sed enim ut sem. Nibh mauris cursus mattis molestie a. Morbi tristique senectus et netus. Turpis egestas integer eget aliquet nibh praesent tristique. Amet nulla facilisi morbi tempus iaculis urna id volutpat. Facilisi nullam vehicula ipsum a arcu. Sed elementum tempus egestas sed sed risus. Arcu dui vivamus arcu felis bibendum. Nunc mattis enim ut tellus elementum sagittis vitae. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Aliquam purus sit amet luctus venenatis lectus. Mollis nunc sed id semper. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Convallis convallis tellus id interdum velit. Vulputate ut pharetra sit amet aliquam id diam maecenas.
-
-          Nibh cras pulvinar mattis nunc sed blandit libero. Posuere lorem ipsum dolor sit. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. At lectus urna duis convallis convallis tellus id. Phasellus egestas tellus rutrum tellus pellentesque eu. Et egestas quis ipsum suspendisse. Arcu cursus vitae congue mauris rhoncus aenean vel. Placerat orci nulla pellentesque dignissim enim sit amet. Euismod elementum nisi quis eleifend quam adipiscing vitae. Semper risus in hendrerit gravida rutrum quisque non tellus. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius.
-
-          Ultrices tincidunt arcu non sodales neque sodales. Ut venenatis tellus in metus vulputate eu. Aliquam malesuada bibendum arcu vitae. Non arcu risus quis varius quam quisque id diam. Et pharetra pharetra massa massa ultricies mi quis hendrerit dolor. Facilisis volutpat est velit egestas. Integer eget aliquet nibh praesent tristique magna sit amet. Morbi non arcu risus quis varius. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Egestas erat imperdiet sed euismod nisi porta. Eu feugiat pretium nibh ipsum consequat nisl vel. Sed libero enim sed faucibus turpis in eu. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Ac ut consequat semper viverra nam libero. At quis risus sed vulputate odio ut enim blandit volutpat. Odio morbi quis commodo odio aenean sed adipiscing diam donec. Sem et tortor consequat id.
-
-          Erat velit scelerisque in dictum non consectetur a erat nam. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Vitae semper quis lectus nulla at volutpat diam. Nam at lectus urna duis convallis convallis tellus id interdum. Vitae tortor condimentum lacinia quis vel eros donec ac. Fusce ut placerat orci nulla pellentesque dignissim enim sit. In iaculis nunc sed augue lacus viverra. Sodales ut eu sem integer vitae justo eget. Lorem ipsum dolor sit amet consectetur adipiscing elit. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing.
-
-          Eget nunc scelerisque viverra mauris in aliquam sem fringilla. Sed sed risus pretium quam. Quam lacus suspendisse faucibus interdum posuere. Tortor condimentum lacinia quis vel. At augue eget arcu dictum varius duis at consectetur. Pellentesque pulvinar pellentesque habitant morbi tristique. Amet justo donec enim diam. Dui accumsan sit amet nulla facilisi morbi tempus iaculis urna. Adipiscing commodo elit at imperdiet dui accumsan. Lorem ipsum dolor sit amet consectetur adipiscing.
-          Tortor consequat id porta nibh venenatis cras sed. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Sem viverra aliquet eget sit amet tellus cras. Nec nam aliquam sem et tortor consequat id porta. Velit sed ullamcorper morbi tincidunt ornare. Cursus vitae congue mauris rhoncus aenean vel elit. Consequat semper viverra nam libero justo laoreet sit amet. Sodales ut eu sem integer vitae.
-        </div>
       </div>
     </div>
   </div>
