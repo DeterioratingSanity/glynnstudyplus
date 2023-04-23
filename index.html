@@ -1,4 +1,7 @@
-<script type="text/javascript" src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
 <!--
 <style>
   *{
@@ -157,7 +160,7 @@
   .carousel-cell{
     display: flex;
     align-items: center;
-    min-height: 40vh;
+    min-height: 78vh;
   }
   .cell-wrapper{
     background-color: black;
@@ -166,13 +169,17 @@
     padding-bottom: 5px;
   }
   .flickity-page-dots {
-    bottom: 0px;
+    bottom: 0;
   }
   .flickity-page-dots .dot {
-    width: 12px;
-    height: 12px;
-    opacity: 1;
-    background: transparent;
+     display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    background: #333;
+    border-radius: 50%;
+    opacity: .25;
+    cursor: pointer;
     border: 2px solid white;
     transition: 0.5s;
   }
@@ -197,7 +204,7 @@
   }
   .grid-container > div {
     background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj3L0HU9hftDfSuelj7p2_uobRgIK_-pvwXQ:https://resources.workable.com/wp-content/uploads/2013/09/journalist-640x230.jpg&usqp=CAU");
-    padding: 40px 0;
+    padding: 60px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,13 +236,47 @@
     grid-row-start: 1;
     grid-row-end: 3;
   }
+  @media screen and (max-width: 800px){
+    .grid-container > div {
+      filter: grayscale(0);
+      color: #FF6961;
+    }
+    .grid-container{
+      grid-template-columns: 48% 48%;
+      grid-template-rows: 49% 49%;
+    }
+    .item1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    .item2 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    .item3 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    .item4 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    .flickity-page-dots {
+      bottom: 0;
+    }
+  }
 </style>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
 <link href="https://fonts.cdnfonts.com/css/jua" rel="stylesheet">
 
 <div class="oneWrapper">
@@ -256,9 +297,9 @@
                   <div class="header">
                     <div class="grid-container">
                       <div class="item1"><span>About</span></div>
-                      <div class="item2"><span>Time Management</span></div>
+                      <div class="item2"><span>Time Manage&shy;<wbr>ment</span></div>
                       <div class="item3"><span>Study Skills</span></div>
-                      <div class="item4"><span>Developer</span></div>
+                      <div class="item4"><span>WDW</span></div>
                     </div>
                   </div>
                 </div>
@@ -269,3 +310,18 @@
     </div>
   </div>
 </div>
+
+<script>
+  $('.item1').click(function(){
+    window.open("https://about.glynnstudyplus.org", "_self");
+    return false;
+  })
+  $('.item2').click(function(){
+    window.open("time.html", "_self");
+    return false;
+  })
+  $('.item3').click(function(){
+    window.open("study.html", "_self");
+    return false;
+  })
+</script>
