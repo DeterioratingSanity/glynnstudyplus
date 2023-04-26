@@ -230,7 +230,27 @@
   		 -o-transform: none;
   				transform: none;
 }
-
+#revealThree {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  	 -moz-transform: scale(0.9);
+  		-ms-transform: scale(0.9);
+  		 -o-transform: scale(0.9);
+  				transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  	 -moz-transition: all 1s ease-in-out;
+  		-ms-transition: all 1s ease-in-out;
+  		 -o-transition: all 1s ease-in-out;
+  				transition: all 1s ease-in-out;
+}
+#revealThree.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  	 -moz-transform: none;
+  		-ms-transform: none;
+  		 -o-transform: none;
+  				transform: none;
+}
 
 .hide{
   display: none;
@@ -301,16 +321,59 @@ Main body section
 
           <div class="sectWrapperOuter" >
             <div class="sectWrapperInner">
-              <a href="#sect-start-one" class="sectReference"><div class="sectHeading" id="sect-head-one">~ why ~</div></a>
+              <a href="#sect-start-one" class="sectReference"><div class="sectHeading" id="sect-head-one" style="white-space: nowrap;">~ tips +<wbr> tricks ~</div></a>
             </div>
           </div>
 <div class="hide hideable" id="hideOne"><br id="triggerOne">
-          <div style="min-height:30vh;" id="revealOne">
-              This project is dedicated to promoting positive study skills among the student body, ideally in a manner which is applicable to any other institution, yet which is
-              nonetheless attuned to our own insofar as its particular interviews are concerned. In my academic experience up to this point, I have seen many of my peers struggle
-              with keeping up with their work in the classroom in a manner which does not in and of itself further harm their scholastic endeavors.
+          <div class="three-organizer" id="revealOne">
+              <div class="three-organizer-element">
+                  <img src="./images/boggs-img.jpg" style="width:100%;aspect-ratio: 1/1;border-radius: var(--radius-round); object-fit: cover"><br>
+                  <div style="text-align: center"> Ms. Boggs </div><br>
+              </div>
+              <div class="three-organizer-element-X">
+                "I like index cards, because if you write stuff down you can retain it."<br><br>
+
+                <div style="background-color: #f5f5f5; color: #FF6961; border-radius: var(--radius-4); padding:15px 35px; width: 80%; margin: auto;">
+                This connection is supported in scholarly literature, as in <br><a target="_blank" href="https://www.frontiersin.org/articles/10.3389/fnbeh.2021.634158/full" style="background-color:#FF6961; color:#f5f5f5; padding: 10px 15px; border-radius: var(--radius-4)">Umejima, et al. 2021</a>.
+                </div>
+              </div>
+          </div><br id="triggerTwo">
+
+          <div class="three-organizer back" id="revealTwo">
+              <div class="three-organizer-element">
+                  <img src="./images/newton-img.jpg" style="width:100%;aspect-ratio: 1/1; border-radius: var(--radius-round);object-fit: cover"><br>
+                  <div style="text-align: center"> Mr. Newton </div><br>
+              </div>
+              <div class="three-organizer-element-X">
+                "One tip I learned is taking flash cards to class. Instead of bringing a notebook to class and taking notes in there and then
+                transposing those onto flash cards, I learned in grad school - 'oh, I'm just gonna take the flash cards' - as the teacher makes
+                different points of emphasis 'thats being on a flash card, that one's being on a flash card' -- and then I don't have to spend
+                the extra time making them."
+              </div>
+          </div><br id="triggerThree">
+
+          <div class="three-organizer" id="revealThree">
+              <div class="three-organizer-element">
+                  <img src="./images/churchwell-img.jpg" style="width:100%;aspect-ratio: 1/1; border-radius: var(--radius-round);object-fit: cover"><br>
+                  <div style="text-align: center"> Ms. Churchwell </div><br>
+              </div>
+              <div class="three-organizer-element-X">
+                "I like to go over my notes and then walk away from it for a little bit, maybe do something active, and then come back to it again. I
+                think study breaks are important."
+                <br><br>
+
+                <div style="background-color: #f5f5f5; color: #FF6961; border-radius: var(--radius-4); padding:15px 35px; width: 80%; margin: auto;">
+                Here are some good options for <br><a target="_blank" href="https://healthnetwork.com/blog/trying-relax-put-phone/" style="background-color:#FF6961; color:#f5f5f5; padding: 10px 15px; border-radius: var(--radius-4)">breaks</a>.<br>
+
+                </div>
+              </div>
+
           </div><br>
 
+          <div style="background-color: #f5f5f5; color: #FF6961; border-radius: var(--radius-4); padding:15px 35px; width: 90%; margin: auto;">
+            Be careful, though - studies show that phones aren't as good a break as you might think, as in a study by<br>
+            <a target="_blank" href="https://akjournals.com/view/journals/2006/8/3/article-p395.xml" style="background-color:#FF6961; color:#f5f5f5; padding: 10px 15px; border-radius: var(--radius-4)">Kang and Kurtzberg, 2019</a>.
+          </div>
 </div>
         </div>
       </div>
@@ -367,6 +430,22 @@ Bottom main section
           offset: 50 // move trigger to center of element
         })
         .setClassToggle("#revealOne", "visible") // add class to reveal
+        .addTo(controller);
+      new ScrollMagic.Scene({
+          triggerElement: "#triggerTwo",
+          triggerHook: 0.9, // show, when scrolled 10% into view
+          duration: 0, // hide 10% before exiting view (80% + 10% from bottom)
+          offset: 50 // move trigger to center of element
+        })
+        .setClassToggle("#revealTwo", "visible") // add class to reveal
+        .addTo(controller);
+      new ScrollMagic.Scene({
+          triggerElement: "#triggerThree",
+          triggerHook: 0.9, // show, when scrolled 10% into view
+          duration: 0, // hide 10% before exiting view (80% + 10% from bottom)
+          offset: 50 // move trigger to center of element
+        })
+        .setClassToggle("#revealThree", "visible") // add class to reveal
         .addTo(controller);
 
       oneCheck = 1;

@@ -230,7 +230,48 @@
   		 -o-transform: none;
   				transform: none;
 }
-
+#revealThree {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  	 -moz-transform: scale(0.9);
+  		-ms-transform: scale(0.9);
+  		 -o-transform: scale(0.9);
+  				transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  	 -moz-transition: all 1s ease-in-out;
+  		-ms-transition: all 1s ease-in-out;
+  		 -o-transition: all 1s ease-in-out;
+  				transition: all 1s ease-in-out;
+}
+#revealThree.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  	 -moz-transform: none;
+  		-ms-transform: none;
+  		 -o-transform: none;
+  				transform: none;
+}
+#revealFour {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  	 -moz-transform: scale(0.9);
+  		-ms-transform: scale(0.9);
+  		 -o-transform: scale(0.9);
+  				transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  	 -moz-transition: all 1s ease-in-out;
+  		-ms-transition: all 1s ease-in-out;
+  		 -o-transition: all 1s ease-in-out;
+  				transition: all 1s ease-in-out;
+}
+#revealFour.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  	 -moz-transform: none;
+  		-ms-transform: none;
+  		 -o-transform: none;
+  				transform: none;
+}
 
 .hide{
   display: none;
@@ -301,15 +342,69 @@ Main body section
 
           <div class="sectWrapperOuter" >
             <div class="sectWrapperInner">
-              <a href="#sect-start-one" class="sectReference"><div class="sectHeading" id="sect-head-one">~ why ~</div></a>
+              <a href="#sect-start-one" class="sectReference"><div class="sectHeading" id="sect-head-one"style="white-space: nowrap;">~ tips +<wbr> tricks ~</div></a>
             </div>
           </div>
 <div class="hide hideable" id="hideOne"><br id="triggerOne">
-          <div style="min-height:30vh;" id="revealOne">
-              This project is dedicated to promoting positive study skills among the student body, ideally in a manner which is applicable to any other institution, yet which is
-              nonetheless attuned to our own insofar as its particular interviews are concerned. In my academic experience up to this point, I have seen many of my peers struggle
-              with keeping up with their work in the classroom in a manner which does not in and of itself further harm their scholastic endeavors.
-          </div><br>
+        <div class="three-organizer" id="revealOne">
+            <div class="three-organizer-element">
+                <img src="./images/vanotteren-img.jpg" style="width:100%;aspect-ratio: 1/1;border-radius: var(--radius-round); object-fit: cover"><br>
+                <div style="text-align: center"> Mrs. VanOtteren </div><br>
+            </div>
+            <div class="three-organizer-element-X">
+              *Do what will take the least ammount of time first, so you have a sense of accomplishment<br><br>
+              *Set timers for when you want to take a break so you don't procreastinate.
+
+              <br><br>
+
+              <div style="background-color: #f5f5f5; color: #FF6961; border-radius: var(--radius-4); padding:15px 35px; width: 80%; margin: auto;">
+              One strategy for breaks is called the <br><a target="_blank" href="https://www.tomatotimers.com/" style="background-color:#FF6961; color:#f5f5f5; padding: 10px 15px; border-radius: var(--radius-4)">Pomodoro Technique</a>.<br>
+              <br>I have found success dividing my time 40-on / 10-off, but this is largely to individual discretion.
+
+              </div>
+            </div>
+        </div><br id="triggerTwo">
+
+        <div class="three-organizer back" id="revealTwo">
+            <div class="three-organizer-element">
+                <img src="./images/fendig-img.jpg" style="width:100%;aspect-ratio: 1/1;border-radius: var(--radius-round); object-fit: cover"><br>
+                <div style="text-align: center"> Sra. Fendig </div><br>
+            </div>
+            <div class="three-organizer-element-X">
+              "I reccomend having a separate paper of a calendar and writing in everything that I'm committed to that has nothing to do with school, like babysitting, or sports,
+               or visiting grandma, or anything that I know is coming up, and then look at any time left, and divide that into preparing for tests and quizzes and all of that.
+               So I have a good balance of family, friends, and school or job."
+            </div>
+        </div><br id="triggerThree">
+
+        <div class="three-organizer" id="revealThree">
+            <div class="three-organizer-element">
+                <img src="./images/graham-baltz-img.jpg" style="width:100%;aspect-ratio: 1/1;border-radius: var(--radius-round); object-fit: cover"><br>
+                <div style="text-align: center"> Mrs. Graham + Ms. Baltz </div><br>
+            </div>
+            <div class="three-organizer-element-X">
+              "Don't procrastinate - it's easy to procrastinate. Create a to-do list of this you need to do to and check off when you have done it. If it's a big assignment - chunk it.
+              Do 'small parts - small parts - small parts' so you're not looking at the big assignment."
+
+              <br><br>
+
+              <div style="background-color: #f5f5f5; color: #FF6961; border-radius: var(--radius-4); padding:15px 35px; width: 80%; margin: auto;">
+              Want some advice for how to chunk your schedule? Check <a target="_blank" href="https://www.tonyrobbins.com/productivity-performance/power-of-chunking/" style="background-color:#FF6961; color:#f5f5f5; padding: 10px 15px; border-radius: var(--radius-4)">here</a>.<br>
+
+              </div>
+            </div>
+        </div><br id="triggerFour">
+
+        <div class="three-organizer back" id="revealFour">
+            <div class="three-organizer-element">
+                <img src="./images/churchwell-img.jpg" style="width:100%;aspect-ratio: 1/1; border-radius: var(--radius-round);object-fit: cover"><br>
+                <div style="text-align: center"> Ms. Churchwell </div><br>
+            </div>
+            <div class="three-organizer-element-X">
+              "I always kind of make a list of what needs to happen with dates, and then just every day try to work on bigger projects a little at a time - that way it's such a big
+              thing at the end."
+            </div>
+        </div><br>
 
 </div>
         </div>
@@ -367,6 +462,30 @@ Bottom main section
           offset: 50 // move trigger to center of element
         })
         .setClassToggle("#revealOne", "visible") // add class to reveal
+        .addTo(controller);
+      new ScrollMagic.Scene({
+          triggerElement: "#triggerTwo",
+          triggerHook: 0.9, // show, when scrolled 10% into view
+          duration: 0, // hide 10% before exiting view (80% + 10% from bottom)
+          offset: 50 // move trigger to center of element
+        })
+        .setClassToggle("#revealTwo", "visible") // add class to reveal
+        .addTo(controller);
+      new ScrollMagic.Scene({
+          triggerElement: "#triggerThree",
+          triggerHook: 0.9, // show, when scrolled 10% into view
+          duration: 0, // hide 10% before exiting view (80% + 10% from bottom)
+          offset: 50 // move trigger to center of element
+        })
+        .setClassToggle("#revealThree", "visible") // add class to reveal
+        .addTo(controller);
+      new ScrollMagic.Scene({
+          triggerElement: "#triggerFour",
+          triggerHook: 0.9, // show, when scrolled 10% into view
+          duration: 0, // hide 10% before exiting view (80% + 10% from bottom)
+          offset: 50 // move trigger to center of element
+        })
+        .setClassToggle("#revealFour", "visible") // add class to reveal
         .addTo(controller);
 
       oneCheck = 1;
