@@ -1,0 +1,380 @@
+<script type="text/javascript" src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<style>
+
+
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/masks.edges.min.css";
+
+
+*{
+  margin: 0;
+  scroll-behavior: smooth;
+ }
+  .oneWrapper{
+    background-color: #24272e;
+    padding-top: 5px;
+    height: auto;
+  }
+  .oneWrapper2{
+    background-color: #f5f5f5;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    height: auto;
+  }
+  .oneWrapper3{
+    background-color: #24272e;
+    -webkit-mask: var(--mask-edge-zig-zag-vertical);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    height: auto;
+  }
+  .mainWrapper{
+    background-color: #24272e;
+    height: auto;
+  }
+  .mainWrapper2{
+    background-color: #f5f5f5;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: auto;
+  }
+  .mainWrapper3{
+    background-color: #24272e;
+    -webkit-mask: var(--mask-edge-zig-zag-vertical);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    height: auto;
+  }
+
+
+  .bottomWrapper{
+    background-color: #24272e;
+    padding-bottom: 5px;
+    height: auto;
+  }
+  .bottomWrapper2{
+    background-color: #f5f5f5;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: auto;
+  }
+  .bottomWrapper3{
+    background-color: #24272e;
+    -webkit-mask: var(--mask-edge-zig-zag-vertical);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    height: auto;
+  }
+  .sect{
+    height:auto;
+    min-height:78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(8.75turn, #FF6961, #FF3D33);
+    -webkit-mask: var(--mask-edge-zig-zag-vertical);
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .header{
+    color: #f5f5f5;
+    font-size: 5em;
+    font-family: 'Jua', sans-serif;
+    text-align: center;
+  }
+  .header img{
+    height: .8em;
+  }
+  .header span{
+    white-space: nowrap;
+  }
+  #sectionOne{
+    align-items: center;
+  }
+  .bodySect{
+    color: #f5f5f5;
+    font-size: 3em;
+    font-family: 'Jua', sans-serif;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .bodySect-content{
+    width: 70%;
+  }
+  *::selection{
+    color: #24272e;
+    background-color: #f5f5f5;
+  }
+
+  .fill-Wrapper{
+    width: 40vw;
+    min-width:350px;
+    background-color:white;
+    height: auto;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    -webkit-mask: var(--mask-edge-zig-zag-vertical);
+    display: flex;
+    justify-content: center;
+  }
+  .fill{
+    width: 100%;
+    overflow: visible;
+    background: linear-gradient(8.75turn, #FF6961, #FF3D33);
+    -webkit-mask: var(--mask-edge-zig-zag-vertical);
+    padding: 25px;
+  }
+
+  @media screen and (width < 600px){
+    .header{
+      font-size: 4.5em;
+    }
+  }
+
+  .return{
+    font-size: .5em;
+    background-color:#f5f5f5;
+    color:#FF6961;
+    border-radius: var(--radius-4);
+    padding: 6px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .return:hover{
+    color: #FF3D33;
+    transition: 0.5s;
+  }
+
+
+.sectWrapperOuter{
+  background: linear-gradient(8.75turn, #FF6961, #FF3D33);
+  position: sticky;
+  top: 0;
+  -webkit-mask: var(--mask-edge-zig-zag-bottom);
+  padding-bottom: 15px;
+}
+.sectWrapperInner{
+  background-color: #f5f5f5;
+  -webkit-mask: var(--mask-edge-zig-zag-bottom);
+  padding-bottom: 15px;
+}
+.sectHeading{
+  font-family: 'Corethan Script' /*'Liefde'*/ , sans-serif;
+  background-color: red;
+  text-align: center;
+  background: linear-gradient(8.75turn, #FF6961, #FF3D33);
+  padding-top: 5px;
+  padding-bottom: 25px;
+  -webkit-mask: var(--mask-edge-zig-zag-bottom);
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.twoWide{
+  width:100%;
+  margin-bottom: 5vh;
+}
+
+.three-organizer{
+  display: relative;
+}
+.three-organizer-element{
+ width: 100%;
+ margin-bottom: 5vh;
+}
+.three-organizer-element-X{
+ width: 100%;
+ margin-bottom: 5vh;
+}
+
+#revealOne {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  	 -moz-transform: scale(0.9);
+  		-ms-transform: scale(0.9);
+  		 -o-transform: scale(0.9);
+  				transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  	 -moz-transition: all 1s ease-in-out;
+  		-ms-transition: all 1s ease-in-out;
+  		 -o-transition: all 1s ease-in-out;
+  				transition: all 1s ease-in-out;
+}
+#revealOne.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  	 -moz-transform: none;
+  		-ms-transform: none;
+  		 -o-transform: none;
+  				transform: none;
+}
+#revealTwo {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  	 -moz-transform: scale(0.9);
+  		-ms-transform: scale(0.9);
+  		 -o-transform: scale(0.9);
+  				transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  	 -moz-transition: all 1s ease-in-out;
+  		-ms-transition: all 1s ease-in-out;
+  		 -o-transition: all 1s ease-in-out;
+  				transition: all 1s ease-in-out;
+}
+#revealTwo.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  	 -moz-transform: none;
+  		-ms-transform: none;
+  		 -o-transform: none;
+  				transform: none;
+}
+
+
+.hide{
+  display: none;
+}
+.sectReference{
+  text-decoration: none;
+  color: #f5f5f5;
+}
+@media screen and (orientation: landscape){
+
+ .three-organizer{
+   display: flex;
+   justify-content: space-between;
+ }
+ .three-organizer-element{
+   width:30%;
+   margin-bottom: auto;
+ }
+ .three-organizer-element-X{
+   width: 60%;
+   margin-bottom: auto;
+ }
+ .twoWide{
+   width:45%;
+   margin-bottom: auto;
+ }
+ .back{
+   flex-direction: row-reverse;
+ }
+}
+</style>
+
+<link href="https://fonts.cdnfonts.com/css/jua" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/liefde" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<link href="https://fonts.cdnfonts.com/css/corethan-script" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<div class="oneWrapper">
+  <div class="oneWrapper2">
+    <div class="oneWrapper3">
+      <div class="sect" id="sectionOne" >
+
+        <div class="header">
+          <span>Study Skills <img src="plus.png"></span><br>
+          <span class="return">Home</span><br><br>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+
+Main body section
+
+-->
+
+<div class="mainWrapper">
+  <div class="mainWrapper2" id="sect-start-one">
+    <div class="mainWrapper3">
+      <div class="sect bodySect">
+        <div class="bodySect-content">
+
+          <div class="sectWrapperOuter" >
+            <div class="sectWrapperInner">
+              <a href="#sect-start-one" class="sectReference"><div class="sectHeading" id="sect-head-one">~ why ~</div></a>
+            </div>
+          </div>
+<div class="hide hideable" id="hideOne"><br id="triggerOne">
+          <div style="min-height:30vh;" id="revealOne">
+              This project is dedicated to promoting positive study skills among the student body, ideally in a manner which is applicable to any other institution, yet which is
+              nonetheless attuned to our own insofar as its particular interviews are concerned. In my academic experience up to this point, I have seen many of my peers struggle
+              with keeping up with their work in the classroom in a manner which does not in and of itself further harm their scholastic endeavors.
+          </div><br>
+
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
+
+
+Bottom main section
+
+
+-->
+
+<div class="bottomWrapper">
+  <div class="bottomWrapper2" id="sect-start-bottom">
+    <div class="bottomWrapper3">
+      <div class="sect bodySect">
+        <div class="bodySect-content">
+
+          <div class="sectWrapperOuter" >
+            <div class="sectWrapperInner">
+              <a href="#" class="sectReference"><div class="sectHeading" id="sect-head-bottom">~ thanks for your time! ~</div></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  TweenLite.defaultEase = Linear.easeNone;
+	var controller = new ScrollMagic.Controller();
+
+  $('.return').click(function(){
+    window.open("https://www.glynnstudyplus.org", "_self");
+    return false;
+  })
+
+  var oneCheck = 0;
+
+  $("#sect-head-one").click(function(){
+    if(oneCheck == 0){
+      $("#hideOne").removeClass("hide");
+
+      new ScrollMagic.Scene({
+          triggerElement: "#triggerOne",
+          triggerHook: 0.9, // show, when scrolled 10% into view
+          duration: 0, // hide 10% before exiting view (80% + 10% from bottom)
+          offset: 50 // move trigger to center of element
+        })
+        .setClassToggle("#revealOne", "visible") // add class to reveal
+        .addTo(controller);
+
+      oneCheck = 1;
+    } else if (oneCheck == 1){
+      $("#hideOne").addClass("hide");
+      $("#revealOne").removeClass("visible");
+      oneCheck = 0;
+    }
+  })
+
+</script>
